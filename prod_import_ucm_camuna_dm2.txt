@@ -1,0 +1,9 @@
+set PGPASSWORD=
+
+C:\"Program Files"\PostgreSQL\15\bin\psql -h  ucmdbdb2-cluster.cez1ov4snvqh.us-east-1.rds.amazonaws.com -p 5432 -U ucmdbadmin -d ucm_dm_db -f D:\scheduled_jobs\sql\rename_existing_ucm_camunda.sql
+pause
+C:\"Program Files"\PostgreSQL\15\bin\psql -h  ucmdbdb2-cluster.cez1ov4snvqh.us-east-1.rds.amazonaws.com -p 5432 -U ucmdbadmin -d ucm_dm_db -f d:\camunda\ucm_camunda.sql
+pause
+
+
+

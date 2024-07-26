@@ -1,0 +1,30 @@
+set PGPASSWORD=
+
+
+
+C:\"Program Files"\PostgreSQL\15\bin\psql -h  ucmdbdb2-cluster.cez1ov4snvqh.us-east-1.rds.amazonaws.com -p 5432 -U ucmdbadmin -d ucm_dm_db -f D:\scheduled_jobs\sql\rename_existing_ucm_owner.sql
+pause
+
+C:\"Program Files"\PostgreSQL\15\bin\psql -h ucmdbdb2-cluster.cez1ov4snvqh.us-east-1.rds.amazonaws.com -p 5432 -U ucmdbadmin -d ucm_dm_db -f c:\prod\ucm_owner.sql 
+
+pause
+
+rem #psql -h db.ucm-dm.cmscloud.local -p 5432 -U ucmdbadmin -d ucm_dm_db -f c:\prod\ucm_owner.sql 
+rem psql -h  dm3dbtesting.cez1ov4snvqh.us-east-1.rds.amazonaws.com -p 5432 -U ucmdbadmin -d ucm_dm_db
+
+rem truncate table ucm_owner.ucm_nexgen_data_recon_queries;
+rem truncate table ucm_owner.ucm_nexgen_data_comparision_results;
+
+rem insert into ucm_owner.ucm_nexgen_data_recon_queries select * from ucm_owner_06052023.ucm_nexgen_data_recon_queries;
+rem insert into ucm_owner.ucm_nexgen_data_comparision_results select * from ucm_owner_06052023.ucm_nexgen_data_comparision_results;
+
+
+
+select replace(ucm_doc_fil_lctn_path,'-prod-','-dm2-'),ucm_doc_fil_lctn_path from ucm_owner.ucm_doc_tmplt_rfrnc
+limit 10
+pause
+update  ucm_owner.ucm_doc_tmplt_rfrnc set ucm_doc_fil_lctn_path=replace(ucm_doc_fil_lctn_path,'-prod-','-dm2-');
+
+
+
+

@@ -1,0 +1,5 @@
+set PGPASSWORD=
+
+C:\"Program Files"\PostgreSQL\15\bin\pg_dump --file "c:\\prod\\ucm_owner.sql" --host "db.ucm-prod.cmscloud.local" --port "5432" --username "ucmdbadmin"  -d "ucm_prod_db" --schema "ucm_owner" 
+
+pause
