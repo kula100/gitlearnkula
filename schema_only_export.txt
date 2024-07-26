@@ -1,0 +1,6 @@
+C:\Program Files\PostgreSQL\15\bin>pg_dump -U ucmdbadmin -h db.ucm-dm.cmscloud.local -p 5432 -d ucm_dm_db -n ucm_mig_rec -s -f d:\\prod\\ucm_mig_rec.sql
+
+C:\Program Files\PostgreSQL\15\bin>pg_dump -U ucmdbadmin -h db.ucm-dm.cmscloud.local -p 5432 -d ucm_dm_db -n ucm_lgcy_stg -s -f d:\\prod\\ucm_lgcy_stg.sql
+
+C:\Program Files\PostgreSQL\15\bin>pg_dump -U ucmdbadmin -h db.ucm-dm.cmscloud.local -p 5432 -d ucm_dm_db -n ucm_mig -s -f d:\\prod\\ucm_mig.sql
+
